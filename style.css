@@ -1,0 +1,201 @@
+/* General body styling for consistency across all pages */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 60px; /* Offset content for fixed navbar */
+}
+
+/* Background colors for each page (cream shades) */
+.body-info2 { background-color: #F0E8D8; } /* Lightest cream */
+.body-info1, .body-welcome { background-color: #E8DDCC; } /* Medium cream */
+.body-services2 { background-color: #E0D5C1; } /* Slightly darker cream */
+.body-services1 { background-color: #D9CBB6; } /* Darkest cream */
+
+/* Heading styles (deep green) */
+h1, h2 {
+    color: #2a5934; /* Deep green */
+}
+
+/* Button styling for call-to-action buttons */
+.button {
+    display: inline-block;
+    background-color: #2a5934;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #3b6341;
+}
+
+/* Link styling */
+a {
+    color: #2a5934;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 20px auto;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+/* Fixed-top navigation bar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2a5934; /* Deep green */
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4b7d50; /* Slightly lighter green */
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #3b6341;
+    color: #e0e0e0;
+}
+
+/* Layout for Page Content */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Fill screen height, accounting for navbar */
+    padding: 20px;
+}
+
+/* Container styling for sections (e.g., intro, services list, login) */
+.intro-text, .services-list, .login-box, .welcome-box {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.intro-text, .welcome-box {
+    max-width: 600px;
+    text-align: center;
+}
+
+.intro-text {
+    flex: 2;
+}
+
+.services-list {
+    flex: 1;
+    background-color: #f8f8f8;
+}
+
+.login-box {
+    max-width: 400px;
+}
+
+/* Services list items */
+.services-list h3, .welcome-box h1 {
+    color: #2a5934;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.services-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-list li {
+    margin-bottom: 15px;
+}
+
+.services-list a, .back-link {
+    color: #2a5934;
+    text-decoration: none;
+}
+
+.services-list a:hover, .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Login form specific styling */
+.login-box h2 {
+    color: #2a5934;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-box input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a5934;
+    color: #fff;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .intro-text, .services-list, .login-box, .welcome-box {
+        width: 100%;
+    }
+}
